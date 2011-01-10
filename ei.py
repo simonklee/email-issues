@@ -1,4 +1,3 @@
-#!/home/simon/src/email-issues/ve/bin/python
 import email
 import mailbox
 import sys

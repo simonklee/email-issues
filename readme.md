@@ -27,7 +27,10 @@ edit crontabs to run your script automatically.
 and add something like:
 
     */1 * * * * getmail --quiet
-    */1 * * * * /full/path/to/email-issues/ei.py
+    */1 * * * * full/path/to/virtualenv/ve/bin/python /full/path/to/email-issues/ei.py
+
+notice how we have to add the full path for the python interpreter and the
+`ei.py`-file. 
 
 ## settings.py
 
