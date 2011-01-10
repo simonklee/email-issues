@@ -4,7 +4,10 @@ import mailbox
 import sys
 
 from github2.client import Github
-from settings import SETTINGS
+try:
+    from settings import SETTINGS
+except ImportError:
+    exit('Usage: You must add a settings.py file to your project, see readme.md\n')
 
 inbox = mailbox.Maildir(SETTINGS['MAIL_PATH_DIR'])
 github = Github(
