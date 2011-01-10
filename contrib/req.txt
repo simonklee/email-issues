@@ -1,0 +1,2 @@
+fabric
+git+git://github.com/ask/python-github2.git
