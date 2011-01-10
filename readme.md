@@ -34,11 +34,9 @@ notice how we have to add the full path for the python interpreter and the
 
 ## settings.py
 
-`settings.py` should contain one dictionary, `SETTINGS`.
+`settings.py` should contain all of the following constants.
 
-    SETTINGS = {
-        'GITHUB_USER': '<username>',       # simonz05
-        'GITHUB_API': '<api_key>',         # e4d909c290d0fb1ca068ffaddf22cbd0
-        'GITHUB_PROJ': '<project_name>',   # simonz05/email-issues 
-        'MAIL_PATH_DIR': '<local_dir>'     # ~/mail/
-    }
+    GITHUB_USER = '<username>'        # simonz05
+    GITHUB_API = '<api_key>'          # e4d909c290d0fb1ca068ffaddf22cbd0
+    GITHUB_PROJ = '<project_name>'    # simonz05/email-issues
+    MAIL_PATH_DIR = '<local_dir>'     # ~/mail/

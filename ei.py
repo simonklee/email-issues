@@ -4,14 +4,14 @@ import sys
 
 from github2.client import Github
 try:
-    from settings import SETTINGS
+    import settings
 except ImportError:
-    exit('Usage: You must add a settings.py file to your project, see readme.md\n')
+    exit('Exit: You must add a settings.py file to your project, see readme.md\n')
 
-inbox = mailbox.Maildir(SETTINGS['MAIL_PATH_DIR'])
+inbox = mailbox.Maildir(settings.MAIL_PATH_DIR)
 github = Github(
-    username=SETTINGS['GITHUB_USER'],
-    api_token=SETTINGS['GITHUB_API'],
+    username=settings.GITHUB_USER,
+    api_token=settings.GITHUB_API,
     requests_per_second=1)
 
 def read(m_str):
@@ -32,7 +32,7 @@ def remove_messages(messages):
         inbox.remove(k)
     inbox.flush()
 
-def add_issues(project=SETTINGS['GITHUB_PROJ']):
+def add_issues(project=settings.GITHUB_PROJ):
     messages = read_messages()
     if not messages:
         return
