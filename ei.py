@@ -39,7 +39,6 @@ def add_issues(project=settings.GITHUB_PROJ):
 
     issues = dict(((i.title, i.number) for i in github.issues.list(project)))
     for m in messages.values():
-        print m['subject']
         if m['subject'] in issues.keys():
             github.issues.comment(project, issues[m['subject']], m['message'])
         else:
