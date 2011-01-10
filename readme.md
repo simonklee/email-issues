@@ -2,7 +2,10 @@
 
 email-issues is a small python script which will parse a local email directory
 for new emails and add them to a github-projects issue tracker. Nothing fancy,
-just doing one simple task.
+just doing one simple task. Emails are expected to be stored in the
+[Maildir](http://en.wikipedia.org/wiki/Maildir) format, but the python
+[mailbox](http://docs.python.org/py3k/library/mailbox.html) has support for
+others if needed.
 
 ## install
 
